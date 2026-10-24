@@ -179,7 +179,7 @@ public class CharacterAnimator : MonoBehaviour
             }
         }
 
-        float vy = rb.velocity.y; // use rb.linearVelocity.y on Unity 6+
+        float vy = rb.linearVelocity.y; // use rb.linearVelocity.y on Unity 6+
         if (vy > apexThreshold) sr.sprite = jumpSprites[0];        // rising
         else if (vy < -apexThreshold) sr.sprite = jumpSprites[2];  // falling
         else sr.sprite = jumpSprites[1];                           // apex
