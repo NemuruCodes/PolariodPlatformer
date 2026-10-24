@@ -492,6 +492,9 @@ MonoBehaviour:
   MoveStats: {fileID: 11400000, guid: ac15a1898602aeb4c996c3aa645d2454, type: 2}
   _feetColl: {fileID: 1826286453}
   _bodyColl: {fileID: 110718219}
+  _frictionlessMat: {fileID: 6200000, guid: 2a83d6a1396364f4fb281700a96f30a6, type: 2}
+  _gripMat: {fileID: 6200000, guid: 1dda461eeb16d56498434976fb4b4695, type: 2}
+  _maxSlopeAngle: 60
 --- !u!50 &1836940292
 Rigidbody2D:
   serializedVersion: 5
@@ -508,7 +511,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0
   m_GravityScale: 0
-  m_Material: {fileID: 6200000, guid: 2a83d6a1396364f4fb281700a96f30a6, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -587,7 +590,7 @@ Transform:
   m_GameObject: {fileID: 1836940290}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.5, y: 3, z: 0}
+  m_LocalPosition: {x: 9, y: -4, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -659,14 +662,14 @@ MonoBehaviour:
   _target: {fileID: 1836940294}
   _targetRb: {fileID: 1836940292}
   _offset: {x: 0, y: 1}
-  _horizontalSmoothTime: 0.5
-  _verticalSmoothTime: 0.5
-  _lookAheadDistance: 1
-  _lookAheadSmoothTime: 2
-  _lookAheadMinSpeed: 0.1
+  _horizontalSmoothTime: 0.8
+  _verticalSmoothTime: 0.8
+  _lookAheadDistance: 0.1
+  _lookAheadSmoothTime: 50
+  _lookAheadMinSpeed: 50
   _deadZoneHeight: 1
   _recenterDelay: 0.25
-  _recenterSmoothTime: 0.4
+  _recenterSmoothTime: 1
   _fallLookDownDistance: 3
   _fallSpeedThreshold: 10
   _fallLookDownSmoothTime: 0.3
@@ -785,7 +788,7 @@ Transform:
   m_GameObject: {fileID: 1949840062}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.5, y: 3, z: -10}
+  m_LocalPosition: {x: 9, y: -4, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

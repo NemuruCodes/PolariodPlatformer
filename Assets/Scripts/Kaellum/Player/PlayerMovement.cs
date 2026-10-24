@@ -7,6 +7,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Collider2D _feetColl;
     [SerializeField] private Collider2D _bodyColl;
 
+    [Header("Materials")]
+    [SerializeField] private PhysicsMaterial2D _frictionlessMat;
+    [SerializeField] private PhysicsMaterial2D _gripMat;
+
+    [Header("Slopes")]
+    [SerializeField, Range(0f, 89f)] private float _maxSlopeAngle = 60f;
+
     private Rigidbody2D _rb;
 
     //movement variables
@@ -58,6 +65,14 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         CollisionChecks();
+
+        bool idleOnGround = _isGrounded && !_isJumping && Mathf.Abs(InputManager.Movement.x) < 0.01f;
+        PhysicsMaterial2D wanted = idleOnGround ? _gripMat : _frictionlessMat;
+        if (_rb.sharedMaterial != wanted)
+        {
+            _rb.sharedMaterial = wanted;
+        }
+
         Jump();
 
         if (_isGrounded) 
@@ -89,13 +104,30 @@ public class PlayerMovement : MonoBehaviour
             }
 
             _moveVelocity = Vector2.Lerp(_moveVelocity, targetVelocity, acceleration * Time.fixedDeltaTime);
-            _rb.linearVelocity = new Vector2(_moveVelocity.x, _rb.linearVelocity.y);
+            ApplyMoveVelocity();
         }
         else if (moveInput == Vector2.zero) 
         {
             _moveVelocity = Vector2.Lerp(_moveVelocity, Vector2.zero, deceleration * Time.fixedDeltaTime);
-            _rb.linearVelocity = new Vector2(_moveVelocity.x, _rb.linearVelocity.y);
+            ApplyMoveVelocity();
         }
+    }
+    private void ApplyMoveVelocity()
+    {
+        if (_isGrounded && !_isJumping && _groundHit.collider != null)
+        {
+            float angle = Vector2.Angle(_groundHit.normal, Vector2.up);
+
+            if (angle > 1f && angle <= _maxSlopeAngle)
+            {
+                // Direction along the slope surface (points right/uphill for a right-rising slope)
+                Vector2 slopeDir = new Vector2(_groundHit.normal.y, -_groundHit.normal.x);
+                _rb.linearVelocity = slopeDir * _moveVelocity.x;
+                return;
+            }
+        }
+
+        _rb.linearVelocity = new Vector2(_moveVelocity.x, _rb.linearVelocity.y);
     }
 
     private void TurnCheck(Vector2 moveInput) 
