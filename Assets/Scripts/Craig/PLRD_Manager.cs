@@ -1,7 +1,11 @@
 using UnityEngine;
 
+
+//https://www.youtube.com/watch?v=8t1wr9M_Zb4
+
 public class PLRD_Manager : MonoBehaviour
 {
+
     PLRD_Enum currentEnum;
     Vector2 offset;
 
