@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5310d2a4febdcbf4cbec7a8e587cf74a, type: 3}
   m_Name: LevelGenConfig
   m_EditorClassIdentifier: Assembly-CSharp::LevelGenConfig
-  playerWidth: 0.4
-  playerHeight: 1
+  playerWidth: 0.8
+  playerHeight: 2
   jumpHeight: 2
   jumpForwardReach: 1.5
   sectionWidthInPlayerHeights: 9

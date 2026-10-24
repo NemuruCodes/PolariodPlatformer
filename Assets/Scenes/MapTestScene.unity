@@ -656,15 +656,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a2a7b9265d3a3148982466c50ff1ca3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
-  _target: {fileID: 0}
-  _targetRb: {fileID: 0}
+  _target: {fileID: 1836940294}
+  _targetRb: {fileID: 1836940292}
   _offset: {x: 0, y: 1}
-  _horizontalSmoothTime: 0.15
-  _verticalSmoothTime: 0.25
-  _lookAheadDistance: 3
-  _lookAheadSmoothTime: 0.35
-  _lookAheadMinSpeed: 0.5
-  _deadZoneHeight: 2
+  _horizontalSmoothTime: 0.5
+  _verticalSmoothTime: 0.5
+  _lookAheadDistance: 1
+  _lookAheadSmoothTime: 2
+  _lookAheadMinSpeed: 0.1
+  _deadZoneHeight: 1
   _recenterDelay: 0.25
   _recenterSmoothTime: 0.4
   _fallLookDownDistance: 3
@@ -760,7 +760,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 2
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
