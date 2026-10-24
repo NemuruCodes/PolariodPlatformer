@@ -10,7 +10,7 @@ public class LevelGenerator : MonoBehaviour
     [SerializeField] Material yarnMaterial;
     [SerializeField] GameObject pinPrefab;
 
-
+    //McGuffin spawn
     public GameObject macGuffinPrefab;
     public Vector3 MacGuffinSpawnPoint { get; private set; }
     int macGuffinGridX;
