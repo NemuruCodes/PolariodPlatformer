@@ -436,7 +436,7 @@ Transform:
   m_GameObject: {fileID: 1063464765}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.1, y: 3.1, z: 0}
+  m_LocalPosition: {x: 4.1, y: 3.1, z: 1}
   m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -663,6 +663,9 @@ MonoBehaviour:
   MoveStats: {fileID: 11400000, guid: ac15a1898602aeb4c996c3aa645d2454, type: 2}
   _feetColl: {fileID: 1826286453}
   _bodyColl: {fileID: 110718219}
+  _frictionlessMat: {fileID: 6200000, guid: 2a83d6a1396364f4fb281700a96f30a6, type: 2}
+  _gripMat: {fileID: 6200000, guid: 1dda461eeb16d56498434976fb4b4695, type: 2}
+  _maxSlopeAngle: 60
 --- !u!50 &1836940292
 Rigidbody2D:
   serializedVersion: 5
@@ -862,12 +865,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a2a7b9265d3a3148982466c50ff1ca3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
-  _target: {fileID: 0}
-  _targetRb: {fileID: 0}
+  _target: {fileID: 1836940294}
+  _targetRb: {fileID: 1836940292}
   _offset: {x: 0, y: 1}
-  _horizontalSmoothTime: 0.15
-  _verticalSmoothTime: 0.25
-  _lookAheadDistance: 3
+  _horizontalSmoothTime: 20
+  _verticalSmoothTime: 20
+  _lookAheadDistance: 0.2
   _lookAheadSmoothTime: 0.35
   _lookAheadMinSpeed: 0.5
   _deadZoneHeight: 2
@@ -966,7 +969,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 2
+  orthographic size: 4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
