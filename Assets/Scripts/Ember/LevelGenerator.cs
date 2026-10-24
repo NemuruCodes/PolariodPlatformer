@@ -216,6 +216,7 @@ public class LevelGenerator : MonoBehaviour
     {
         var go = new GameObject("Yarn");
         go.transform.SetParent(parent, false);
+        go.layer = LayerMask.NameToLayer("Ground");
 
         Vector2 mid = (a + b) * 0.5f;
         go.transform.localPosition = mid;
