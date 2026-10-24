@@ -11417,10 +11417,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Win
       objectReference: {fileID: 0}
+    - target: {fileID: 2177401336239917961, guid: 1e61c3c9bc149b944a7646aec9824887, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5670024719713269230, guid: 1e61c3c9bc149b944a7646aec9824887, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1949840067}
+    - target: {fileID: 7657078093933690703, guid: 1e61c3c9bc149b944a7646aec9824887, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
