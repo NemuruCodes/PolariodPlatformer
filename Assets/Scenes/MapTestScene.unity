@@ -470,6 +470,7 @@ GameObject:
   - component: {fileID: 1836940293}
   - component: {fileID: 1836940292}
   - component: {fileID: 1836940291}
+  - component: {fileID: 1836940295}
   m_Layer: 0
   m_Name: PLAYER
   m_TagString: Player
@@ -594,6 +595,41 @@ Transform:
   - {fileID: 1341863258}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1836940295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1836940290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92c047b766678db4fb6b123b5858358d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterAnimator
+  idleSprite: {fileID: 21300000, guid: 34eae8e5f6775204b893d0cffe99aa97, type: 3}
+  walkSprites:
+  - {fileID: 21300000, guid: f2803020cf3776049a879d4c1b39cdba, type: 3}
+  - {fileID: 21300000, guid: 34eae8e5f6775204b893d0cffe99aa97, type: 3}
+  - {fileID: 21300000, guid: 9eabfd701a96a884c9b25237f50cc407, type: 3}
+  jumpSprites:
+  - {fileID: 21300000, guid: 9fa029961fac66946b41f6917ee6b994, type: 3}
+  - {fileID: 21300000, guid: 4724e4330ad28cd46bd5d333c8a31b1e, type: 3}
+  - {fileID: 21300000, guid: d1664ec2b98e2b74a81b4d10edae12d2, type: 3}
+  walkFrameTime: 0.5
+  sprintFrameTime: 0.25
+  doubleJumpFrameTime: 0.25
+  leftKey: 97
+  rightKey: 100
+  jumpKey: 32
+  sprintKey: 304
+  groundCheck: {fileID: 1826286452}
+  groundCheckRadius: 0.1
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  feetOffset: 0.5
+  apexThreshold: 1.5
 --- !u!1 &1949840062
 GameObject:
   m_ObjectHideFlags: 0
