@@ -5587,8 +5587,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1930930579}
-  - component: {fileID: 1930930578}
-  - component: {fileID: 1930930577}
+  - component: {fileID: 1930930580}
   m_Layer: 0
   m_Name: SFXManager
   m_TagString: Untagged
@@ -5596,132 +5595,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!82 &1930930577
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1930930576}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: d4f750ba93c42c440ae353efe49df6e7, type: 2}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 0.297
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &1930930578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1930930576}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77fd679a726209c409571796bd07ac4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sfxEntries:
-  - key: Footstep
-    clip: {fileID: 8300000, guid: ce2d288c33c10ef43aaec3f83a3bb3e4, type: 3}
-  - key: Jump
-    clip: {fileID: 8300000, guid: d006cc3496d0afb44bfb23e16f234437, type: 3}
-  - key: Land
-    clip: {fileID: 8300000, guid: a7885ec250ebe874388a627ccbdb4a7b, type: 3}
-  - key: Coin
-    clip: {fileID: 8300000, guid: 1b482e59eb3c885428556b0f3b3a0bfb, type: 3}
-  - key: Sprint
-    clip: {fileID: 8300000, guid: ce2d288c33c10ef43aaec3f83a3bb3e4, type: 3}
-  - key: MenuMusic
-    clip: {fileID: 8300000, guid: 4ca01027a20a7274dbe088d63e4a3d56, type: 3}
-  - key: GameMusic
-    clip: {fileID: 8300000, guid: a199900ec64f9a749b1659a70e7648f8, type: 3}
-  audioSource: {fileID: 1930930577}
-  volume: 0.5
 --- !u!4 &1930930579
 Transform:
   m_ObjectHideFlags: 0
@@ -5737,6 +5610,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1930930580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930930576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 124f8f4045e4a564b833df6fef65500b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  menuMusic: {fileID: 8300000, guid: 7fcaabbff5e3ea441ba1beca626a7de1, type: 3}
+  gameMusic: {fileID: 8300000, guid: 7fcaabbff5e3ea441ba1beca626a7de1, type: 3}
+  menuSceneName: MainMenu
+  musicVolume: 0.5
+  jumpSound: {fileID: 8300000, guid: 29ae6b238ee75ca4aaf1e63aa96257a0, type: 3}
+  clickSound: {fileID: 8300000, guid: 2f665b22590690b46854d4bbaba92e86, type: 3}
+  sfxVolume: 1
 --- !u!1 &1958853724
 GameObject:
   m_ObjectHideFlags: 0
