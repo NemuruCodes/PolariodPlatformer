@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5310d2a4febdcbf4cbec7a8e587cf74a, type: 3}
+  m_Name: LevelGenConfig
+  m_EditorClassIdentifier: Assembly-CSharp::LevelGenConfig
+  playerWidth: 0.4
+  playerHeight: 1
+  jumpHeight: 2
+  jumpForwardReach: 1.5
+  sectionWidthInPlayerHeights: 9
+  sectionHeightInPlayerHeights: 5
+  minPinDistance: 1.6
+  edgeMargin: 0.2
+  startDensity: 0.15
+  endDensity: 0.15
+  densityRampSections: 0
+  edgeKeepProb: 1
+  nearHorizontalThreshold: 15
+  yarnThickness: 0.04
+  yarnSag: 0.08
+  kNeighbors: 1
+  maxEdgeLength: 4
+  minGapHeight: 1.5
+  maxPhotosStart: 3
+  maxPhotosEnd: 6
+  photoMinLength: 1
+  photoMaxLength: 2
+  photoThickness: 0.05
+  maxEdgeRerolls: 30
+  inheritedStripWidth: 1.5
