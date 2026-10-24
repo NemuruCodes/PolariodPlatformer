@@ -9612,8 +9612,8 @@ MonoBehaviour:
   MoveStats: {fileID: 11400000, guid: ac15a1898602aeb4c996c3aa645d2454, type: 2}
   _feetColl: {fileID: 1826286453}
   _bodyColl: {fileID: 110718219}
-  _frictionlessMat: {fileID: 0}
-  _gripMat: {fileID: 0}
+  _frictionlessMat: {fileID: 6200000, guid: 2a83d6a1396364f4fb281700a96f30a6, type: 2}
+  _gripMat: {fileID: 6200000, guid: 1dda461eeb16d56498434976fb4b4695, type: 2}
   _maxSlopeAngle: 60
 --- !u!50 &1836940292
 Rigidbody2D:
@@ -10050,7 +10050,6 @@ GameObject:
   - component: {fileID: 1949840066}
   - component: {fileID: 1949840065}
   - component: {fileID: 1949840064}
-  - component: {fileID: 1949840063}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -10058,7 +10057,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1949840063
+--- !u!114 &1949840064
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10072,46 +10071,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
   _target: {fileID: 1836940294}
   _targetRb: {fileID: 1836940292}
-  _offset: {x: 0, y: 1}
-  _horizontalSmoothTime: 0.15
-  _verticalSmoothTime: 0.25
-  _lookAheadDistance: 3
-  _lookAheadSmoothTime: 0.35
+  _offset: {x: 0, y: 0.5}
+  _horizontalSmoothTime: 0.3
+  _verticalSmoothTime: 0.4
+  _lookAheadDistance: 0.01
+  _lookAheadSmoothTime: 0.6
   _lookAheadMinSpeed: 0.5
-  _deadZoneHeight: 2
-  _recenterDelay: 0.25
-  _recenterSmoothTime: 0.4
-  _fallLookDownDistance: 3
-  _fallSpeedThreshold: 10
-  _fallLookDownSmoothTime: 0.3
-  _useBounds: 0
-  _minBounds: {x: -50, y: -20}
-  _maxBounds: {x: 50, y: 20}
---- !u!114 &1949840064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1949840062}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a2a7b9265d3a3148982466c50ff1ca3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
-  _target: {fileID: 0}
-  _targetRb: {fileID: 0}
-  _offset: {x: 0, y: 1}
-  _horizontalSmoothTime: 0.15
-  _verticalSmoothTime: 0.25
-  _lookAheadDistance: 3
-  _lookAheadSmoothTime: 0.35
-  _lookAheadMinSpeed: 0.5
-  _deadZoneHeight: 2
-  _recenterDelay: 0.25
-  _recenterSmoothTime: 0.4
-  _fallLookDownDistance: 3
-  _fallSpeedThreshold: 10
+  _deadZoneHeight: 1
+  _recenterDelay: 0.8
+  _recenterSmoothTime: 0.6
+  _fallLookDownDistance: 1.5
+  _fallSpeedThreshold: 5
   _fallLookDownSmoothTime: 0.3
   _useBounds: 0
   _minBounds: {x: -50, y: -20}
