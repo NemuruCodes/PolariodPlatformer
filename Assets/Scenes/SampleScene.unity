@@ -296,6 +296,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -390,7 +391,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -421,6 +422,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a2a7b9265d3a3148982466c50ff1ca3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
+  _target: {fileID: 1545087038}
+  _targetRb: {fileID: 1545087040}
+  _offset: {x: 0, y: 1}
+  _horizontalSmoothTime: 0.15
+  _verticalSmoothTime: 0.25
+  _lookAheadDistance: 3
+  _lookAheadSmoothTime: 0.35
+  _lookAheadMinSpeed: 0.5
+  _deadZoneHeight: 2
+  _recenterDelay: 0.25
+  _recenterSmoothTime: 0.4
+  _fallLookDownDistance: 3
+  _fallSpeedThreshold: 10
+  _fallLookDownSmoothTime: 0.3
+  _useBounds: 0
+  _minBounds: {x: -50, y: -20}
+  _maxBounds: {x: 50, y: 20}
 --- !u!1 &598600584
 GameObject:
   m_ObjectHideFlags: 0
